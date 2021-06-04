@@ -53,6 +53,10 @@ export const LoginPage = () => {
     }
   };
 
+  const allOk = () => {
+    return email.length && password.length > 0;
+  };
+
   return (
     <form className='login100-form validate-form flex-sb flex-w' onSubmit={handleSubmit}>
       <span className='login100-form-title mb-3'>Chat - Login</span>
@@ -102,7 +106,9 @@ export const LoginPage = () => {
       </div>
 
       <div className='container-login100-form-btn m-t-17'>
-        <button className='login100-form-btn'>Login</button>
+        <button className='login100-form-btn' type='submit' disabled={!allOk()}>
+          Login
+        </button>
       </div>
     </form>
   );
