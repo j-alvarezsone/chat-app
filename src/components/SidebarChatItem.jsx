@@ -1,11 +1,10 @@
 import React from 'react';
-
 export const SidebarChatItem = () => {
   return (
     <div className='chat_list'>
       <div className='chat_people'>
         <div className='chat_img'>
-          <img src='https://ptetutorials.com/images/user-profile.png' alt='sunil' />
+          <img src='/assets/user.png' alt='sunil' width='40px' height='40px' />
         </div>
         <div className='chat_ib'>
           <h5>Some random name</h5>
