@@ -90,7 +90,7 @@ img {
 
 .chat_img {
   float: left;
-  width: 11%;
+  width: 8%;
 }
 
 .chat_ib {
@@ -122,7 +122,7 @@ img {
 
 .incoming_msg_img {
   display: inline-block;
-  width: 6%;
+  width: 4%;
 }
 
 .received_msg {
