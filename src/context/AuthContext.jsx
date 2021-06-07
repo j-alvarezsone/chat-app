@@ -60,7 +60,7 @@ export const AuthProvider = ({ children }) => {
       setAuth({
         uid: null,
         checking: false,
-        logged: true,
+        logged: false,
         name: null,
         email: null,
       });
