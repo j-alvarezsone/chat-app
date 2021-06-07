@@ -9,7 +9,7 @@ export const useSocket = (serverPath) => {
       }),
     [serverPath],
   );
-  const [online, setOnline] = useState < boolean > false;
+  const [online, setOnline] = useState(false);
 
   useEffect(() => {
     setOnline(socket.connected);
