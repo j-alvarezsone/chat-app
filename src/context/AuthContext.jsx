@@ -1,6 +1,6 @@
 import React, { useCallback, useState } from 'react';
 import { createContext } from 'react';
-import { fetchWithoutToken } from '../helpers/fetch';
+import { fetchWithoutToken, fetchWithToken } from '../helpers/fetch';
 export const AuthContext = createContext();
 
 const initialState = {
@@ -53,7 +53,46 @@ export const AuthProvider = ({ children }) => {
     return resp.msg;
   };
 
-  const verifyToken = useCallback(() => {}, []);
+  const verifyToken = useCallback(async () => {
+    const token = localStorage.getItem('token');
+
+    if (!token) {
+      setAuth({
+        uid: null,
+        checking: false,
+        logged: true,
+        name: null,
+        email: null,
+      });
+
+      return false;
+    }
+
+    const resp = await fetchWithToken('login/renew');
+
+    if (resp.ok) {
+      localStorage.setItem('token', resp.token);
+      const { user } = resp;
+
+      setAuth({
+        uid: user.uid,
+        checking: false,
+        logged: true,
+        name: user.name,
+        email: user.email,
+      });
+      return true;
+    } else {
+      setAuth({
+        uid: null,
+        checking: false,
+        logged: false,
+        name: null,
+        email: null,
+      });
+      return false;
+    }
+  }, []);
 
   const logout = () => {};
 
