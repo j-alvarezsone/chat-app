@@ -1,6 +1,6 @@
 import React, { useCallback, useState } from 'react';
 import { createContext } from 'react';
-import { fetchWithoutToken, fetchWithToken } from '../helpers/fetch';
+import { fetchWithoutToken, fetchWithToken } from '../../helpers/fetch';
 export const AuthContext = createContext();
 
 const initialState = {

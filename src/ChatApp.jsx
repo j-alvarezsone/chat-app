@@ -1,4 +1,4 @@
-import { AuthProvider } from './context/AuthContext';
+import { AuthProvider } from './context/auth/AuthContext';
 import { AppRouter } from './router/AppRouter';
 
 export const ChatApp = () => {
