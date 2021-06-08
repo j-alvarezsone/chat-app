@@ -5,7 +5,7 @@ export const ChatContext = createContext();
 
 const initialState = {
   uid: '',
-  charActive: null, // UID del usuario al que yo quiero enviar mensajes
+  activeChat: null, // UID del usuario al que yo quiero enviar mensajes
   users: [],
   messages: [], // El chat seleccionado
 };
