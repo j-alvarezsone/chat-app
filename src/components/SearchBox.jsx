@@ -11,7 +11,7 @@ export const SearchBox = () => {
       <div className='srch_bar'>
         <div className='stylish-input-group'>
           <button className='btn text-danger' onClick={logout}>
-            Salir
+            Logout
           </button>
         </div>
       </div>
