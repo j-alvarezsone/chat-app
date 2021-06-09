@@ -3,4 +3,5 @@ export const types = {
   activateChat: '[chat] Activate chat',
   newMessage: '[chat] New message',
   loadMessages: '[chat] Load messages',
+  logout: '[chat] Log out',
 };
