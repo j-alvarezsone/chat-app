@@ -5,9 +5,9 @@ import Swal from 'sweetalert2';
 
 export const RegisterPage = () => {
   const [form, setForm] = useState({
-    name: 'Alberto',
-    email: 'albert@gmail.com',
-    password: '123456',
+    name: '',
+    email: '',
+    password: '',
   });
 
   const { name, email, password } = form;
